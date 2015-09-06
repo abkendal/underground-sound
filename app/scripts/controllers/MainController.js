@@ -1,7 +1,7 @@
 app.controller('MainController', ['$scope', '$http', function($scope, $http){
 
 	$scope.api_key = 'FPTUEWIJXBRDVF0EU';
-
+	$scope.search = '';
 	$scope.artists = [
 		{
 			name:'Corbin Butler',
@@ -24,7 +24,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
 
 		{
 			name:'CHINAH',
-			genre: ['pop', 'indie pop', 'indie rock', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'chillwave'],
+			genre: ['pop', 'indie pop', 'indie rock', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'chillwave', "melancholia", "permanent wave"],
 			songs: [
 				'<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?soundcloud=https%3A//api.soundcloud.com/tracks/213453701&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>',
 				],
@@ -34,7 +34,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
 
 		{
 			name:'Emily Jones',
-			genre: ['pop', 'indie pop', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'singer-songwriter', 'electronic', 'chillwave'],
+			genre: ['pop', 'indie pop', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'singer-songwriter', 'electronic', 'chillwave', "melancholia", "permanent wave"],
 			songs: [
 				'<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?soundcloud=https%3A//api.soundcloud.com/tracks/188161303&color=f2346d"></iframe>',
 				],
@@ -44,7 +44,7 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
 		
 		{
 			name:'kaya',
-			genre: ['indie pop', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'singer-songwriter', 'acoustic pop', 'deep acoustic pop'],
+			genre: ['indie pop', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'singer-songwriter', 'acoustic pop', 'deep acoustic pop', "melancholia", "permanent wave"],
 			songs: [
 				'<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?soundcloud=https%3A//api.soundcloud.com/tracks/217690010&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>',
 				],
@@ -96,17 +96,51 @@ app.controller('MainController', ['$scope', '$http', function($scope, $http){
 	// Stores the value in the input field and performs the echonest genre API call 
 	$scope.artistInput = function() {
 		$scope.search = $('#artistInput').val();
-		fetch();
+		$scope.fetch();
 	};
 
 	// Echonest genre API call, find the genres of the artist entered in the input field
-	function fetch() {
+	$scope.fetch = function() {
 		$http.get("http://developer.echonest.com/api/v4/artist/profile?api_key=" + $scope.api_key + "&name=" + $scope.search + "&bucket=genre&format=json")
 		     .success(function(response){
 		     	$scope.details = response;
-		     	console.log($scope.details);
+		     	$scope.genreResp = response.response.artist.genres;
+		     	$scope.genre = [];
+
+		     	// Populate array with all the genres provided in the response
+		     	for (var i = 0; i < $scope.genreResp.length; i++) {
+		     		$scope.genre[i] = $scope.genreResp[i].name;
+		     	}; 
+
+		     	console.log($scope.genre);
+
+		     	$scope.artistMatch($scope.genre);
 		     });
 	};
+
+	// Find recommendation artists that have a genre that matches at least one genre from the API response
+	$scope.artistMatch = function(response){
+
+		// Each artist in the database
+		for (var i = 0; i < $scope.artists.length; i++){
+			var match = 0;
+			// Each genre for the database artist
+			for (var j = 0; j < $scope.artists[i].genre.length; j++){
+				for (var k = 0; k < response.length; k++){
+					if (response[k] === $scope.artists[i].genre[j]) {
+						console.log($scope.artists[i]);
+						match = 1;
+					};
+				};
+				if (match === 1) {
+					match = 0;
+					break;
+				}
+			};
+		};
+		
+	};
+
 
 }]);
 
