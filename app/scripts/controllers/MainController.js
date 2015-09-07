@@ -8,7 +8,6 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 		{
 			name:'Corbin Butler',
 			genre: ['rap', 'hip hop', 'indie rock', 'rap rock', 'trap music', 'underground rap'],
-			sing:'width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/207761424&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"',
 			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/207761424&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
 			soundcloud: 'https://soundcloud.com/corbin-butler',
 			desc: 'Young rapper/musician from Souther California'
@@ -16,7 +15,7 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 		{
 			name:'KAMAU',
 			genre: ['rap', 'hip hop', 'singer-songwriter', 'underground rap'],
-			song: 'https://w.soundcloud.com/player/?soundcloud=https%3A//api.soundcloud.com/tracks/220599163&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/220599163&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
 			soundcloud: 'https://soundcloud.com/kamauothm',
 			desc: 'Rapper/singer from Brooklyn.'
 		},
@@ -24,7 +23,7 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 		{
 			name:'CHINAH',
 			genre: ['pop', 'indie pop', 'indie rock', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'chillwave', "melancholia", "permanent wave"],
-			song: 'https://w.soundcloud.com/player/?soundcloud=https%3A//api.soundcloud.com/tracks/213453701&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/213453701&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
 			soundcloud: 'https://soundcloud.com/chinahchinah',
 			desc: 'Pop trio from Denmark'
 		},
@@ -32,7 +31,7 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 		{
 			name:'Emily Jones',
 			genre: ['pop', 'indie pop', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'singer-songwriter', 'electronic', 'chillwave', "melancholia", "permanent wave"],
-			song: 'https://w.soundcloud.com/player/?soundcloud=https%3A//api.soundcloud.com/tracks/188161303&color=f2346d',
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/131046257&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
 			soundcloud: 'https://soundcloud.com/emilyrmj',
 			desc: 'Electro-pop vocalist from the UK'
 		},
@@ -40,7 +39,7 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 		{
 			name:'kaya',
 			genre: ['indie pop', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'singer-songwriter', 'acoustic pop', 'deep acoustic pop', "melancholia", "permanent wave"],
-			song: 'https://w.soundcloud.com/player/?soundcloud=https%3A//api.soundcloud.com/tracks/217690010&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/217690010&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
 			soundcloud: 'https://soundcloud.com/kaya2281',
 			desc: 'Singer/songwriter from NYC'
 		},
@@ -48,7 +47,7 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 		{
 			name:'Her',
 			genre: ['indie rock', 'rock', 'blues', 'chill groove', 'dance rock', 'dance-punk'],
-			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215176984&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/222138957&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
 			soundcloud: 'https://soundcloud.com/thebandher',
 			desc: 'Dance-punk duo from France'
 		},
@@ -130,6 +129,7 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 		$scope.artistRand($scope.matches);
 	};
 
+	// Randomly choose a suggestion from the matches
 	$scope.artistRand = function(matches){
 		var selection = Math.round(Math.random() * (matches.length - 1));
 		$scope.suggestion = matches[selection];
