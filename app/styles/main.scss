@@ -11,12 +11,6 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -38,13 +32,6 @@ body {
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -59,13 +46,7 @@ body {
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
+
  
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -91,3 +72,27 @@ body {
     border-bottom: 0;
   }
 }
+
+
+// end of initial code 
+body {
+}
+.bg1,
+.bg2 {
+    padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 100vh;
+}
+.bg1 {
+  background: url('../images/headphones.jpg') no-repeat;
+  background-size: cover;
+}
+.bg2 {
+  display: none;
+}
+.jumbotron {
+  margin-top: 15vh;
+  padding: 33px;
+  background-color: rgba(238, 238, 238, 0.71);
+}
+

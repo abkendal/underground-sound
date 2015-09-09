@@ -27,7 +27,6 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 			soundcloud: 'https://soundcloud.com/chinahchinah',
 			desc: 'Pop trio from Denmark'
 		},
-
 		{
 			name:'Emily Jones',
 			genre: ['pop', 'indie pop', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'singer-songwriter', 'electronic', 'chillwave', "melancholia", "permanent wave"],
@@ -35,7 +34,6 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 			soundcloud: 'https://soundcloud.com/emilyrmj',
 			desc: 'Electro-pop vocalist from the UK'
 		},
-		
 		{
 			name:'kaya',
 			genre: ['indie pop', 'indie pop rock', 'shoegaze', 'emo', 'indie emo', 'indie folk', 'singer-songwriter', 'acoustic pop', 'deep acoustic pop', "melancholia", "permanent wave"],
@@ -43,44 +41,144 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 			soundcloud: 'https://soundcloud.com/kaya2281',
 			desc: 'Singer/songwriter from NYC'
 		},
-		
 		{
 			name:'Her',
 			genre: ['indie rock', 'rock', 'blues', 'chill groove', 'dance rock', 'dance-punk'],
 			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/222138957&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
 			soundcloud: 'https://soundcloud.com/thebandher',
 			desc: 'Dance-punk duo from France'
-		},
-		
-		{
-			name:'P2THEGOLDMA$K',
-			genre: ['future ambient', 'experimental', 'electro', 'trap music', 'deep psytrance', 'rap', 'chillwave', 'dark wave', 'emo', 'rap', 'hip hop'],
-			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215176984&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
-			soundcloud: 'https://soundcloud.com/p2ski',
-			desc: 'Emo thugg rapper from the internet.'
-		},
-		
+		},	
 		{
 			name:'Kweku Collins',
-			genre: ['singer-songwriter', 'pop', 'pop rap', 'alternative hip hop', 'indie rock'],
+			genre: ['singer-songwriter', 'pop', 'indie rock'],
 			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215673535&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
 			soundcloud: 'https://soundcloud.com/kwekucollins',
 			desc: 'Singer/rapper from Illinois.'
 		},
-		// {
-		// 	name:'',
-		// 	genre: [],
-		// 	song: [
-				
-		// 		],
-		// 	soundcloud: '',
-		// 	desc: ''
-		// },
-		
+		{
+			name:'Kwamie Liv',
+			genre: ["pop", "indie r&b", "indietronica", "chamber pop", "synthpop"],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/206261351&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/kwamieliv',
+			desc: 'Vocalist from Denmark'
+		},
+		{
+			name:'A.CHAL',
+			genre: ["indie r&b", "bass music"],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/211590791&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/achal',
+			desc: ''
+		},
+		{
+			name:'innanet james',
+			genre: ['rap', 'hip hop', 'funk', 'jazz'],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/214690999&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/sails-martin',
+			desc: ''
+		},
+		{
+			name:'Connie Constance',
+			genre: ['emo', 'singer-songwriter', 'indie pop'],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215833971&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/itsconniesworld',
+			desc: ''
+		},
+		{
+			name:'JULES BORN',
+			genre: ['permanent wave', 'indie rock', 'sheffield indie'],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/220819703&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/julesareborn',
+			desc: ''
+		},
+		{
+			name:'Ho99o9',
+			genre: ['alternative hip hop', 'metal', 'industrial', 'rap'],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/174629521&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/ho99o9',
+			desc: ''
+		},
+		{
+			name:'Klyne',
+			genre: ["indie r&b", "bass music"],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/185413296&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/thisisklyne',
+			desc: ''
+		},
+		{
+			name:'Night Lovell',
+			genre: ["witch house", "underground hip hop", 'alternative hip hop', 'trapstep'],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/170798966&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/night_lovell',
+			desc: ''
+		},
+		{
+			name:'Clairmont The Second',
+			genre: ["indie r&b", "alternative hip hop", "pop rap", "neo soul", "r&b"],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/180609909&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/clairmontthesecond',
+			desc: ''
+		},
+		{
+			name:'Midnight Side',
+			genre: ["indie r&b", "trapstep", "bass music", "future garage", 'jazz'],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184455602&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/midnight-side',
+			desc: ''
+		},
+		{
+			name:'bobby raps and corbin',
+			genre: ['alternative hip hop', 'underground hip hop', 'nu gaze', "indie r&b", 'emo'],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/208335903&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/spookyblack',
+			desc: ''
+		},
+		{
+			name:'GRiZ',
+			genre: ["trip hop", "chill-out", "electronic", "downtempo", "trance hop"],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/221017355&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/griz',
+			desc: ''
+		},
+		{
+			name:'DARKER THAN WAX',
+			genre: ["trip hop", "chill-out", "electronic", "downtempo", "trance hop"],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/219477098&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/darkerthanwax',
+			desc: ''
+		},
+		{
+			name:'Matt McGhee',
+			genre: ["hip hop", "rap", "hardcore hip hop", "gangster rap", "alternative hip hop"],
+			song: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/222174335&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true',
+			soundcloud: 'https://soundcloud.com/matt-mcghee',
+			desc: ''
+		},
+		{
+			name:'',
+			genre: [],
+			song: '',
+			soundcloud: '',
+			desc: ''
+		},
+		{
+			name:'',
+			genre: [],
+			song: '',
+			soundcloud: '',
+			desc: ''
+		},
+		{
+			name:'',
+			genre: [],
+			song: '',
+			soundcloud: '',
+			desc: ''
+		},
 	];
 
 	// Stores the value in the input field and performs the echonest genre API call 
 	$scope.artistInput = function() {
+		$('.bg2').show();
 		$scope.search = $('#artistInput').val();
 		$scope.fetch();
 	};
