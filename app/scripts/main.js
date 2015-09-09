@@ -13,4 +13,10 @@ $(function() {
       }
     }
   });
+
+  $("#artistInput").keyup(function(event){
+      if(event.keyCode == 13){
+          $("#artistButton").click();
+      }
+  });
 });

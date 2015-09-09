@@ -92,7 +92,10 @@ body {
 }
 .jumbotron {
   margin-top: 15vh;
-  padding: 33px;
+  padding: 50px;
   background-color: rgba(238, 238, 238, 0.71);
+  h1 {
+    font-size: 50px;
+  }
 }
 

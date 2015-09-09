@@ -176,6 +176,7 @@ app.controller('MainController', ['$scope', '$http', '$sce', function($scope, $h
 		},
 	];
 
+
 	// Stores the value in the input field and performs the echonest genre API call 
 	$scope.artistInput = function() {
 		$('.bg2').show();
