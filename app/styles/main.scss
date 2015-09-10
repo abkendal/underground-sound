@@ -119,5 +119,21 @@ body {
     }
   }
 }
+#artistInput,
+#artistButton {
+  height: 45px;
+}
+#artistInput {
+  padding: 5px;
+}
+#artistButton {
+  width: 85px;
+  margin-left: -4px;
+  background: #ff5a5f;
+  color: white;
+  border-color: #ff5a5f;
+  border-bottom-color: #e00007;
+  background-color: #ff5a5f;
+}
 
 
